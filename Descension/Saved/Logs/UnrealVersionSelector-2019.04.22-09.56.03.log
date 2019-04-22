@@ -1,7 +1,0 @@
-AndroidPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.AndroidPlatformSDK has no valid SDK
-IOSPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.IOSPlatformSDK has no valid SDK
-HTML5PlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.HTML5PlatformSDK using manually installed SDK
-LinuxPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.LinuxPlatformSDK has no valid SDK
-WindowsPlatformFactory.RegisterBuildPlatforms: UnrealBuildTool.WindowsPlatformSDK using manually installed SDK
-ProjectFileGenerator.GenerateProjectFiles: Discovering modules, targets and source code for project...
-DynamicCompilation.RequiresCompilation: Compiling C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\BuildRules\UE4Rules.dll: Assembly does not exist
