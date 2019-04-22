@@ -1,9 +1,0 @@
-D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\Definitions.Descension.h
-D:\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Projects\UnrealJam\Descension\Source\Descension/DescensionCharacter.h
-D:\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-D:\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-D:\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-D:\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-d:\projects\unrealjam\descension\intermediate\build\win64\ue4editor\inc\descension\DescensionCharacter.generated.h

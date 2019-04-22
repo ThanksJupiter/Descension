@@ -1,3 +1,0 @@
-D:\Projects\GitHub\Descension\Descension\Source\Descension\Descension.Build.cs
-D:\Projects\GitHub\Descension\Descension\Source\Descension.Target.cs
-D:\Projects\GitHub\Descension\Descension\Source\DescensionEditor.Target.cs

@@ -27,8 +27,6 @@ public:
 	float VerticalMoveSpeedIncreaseMultiplier = 2.0f;
 	UPROPERTY(EditDefaultsOnly, Category = "Horizontal Movement")
 	float HorizontalMoveSpeed = 1.0f;
-	UPROPERTY(EditDefaultsOnly, Category = "Horizontal Movement")
-	float XAxisLock = -510.0f;
 	UPROPERTY(EditDefaultsOnly, Category = "Vertical Movement")
 	float MaximumVerticalOffset = 150.0f;
 
@@ -39,6 +37,7 @@ public:
 	UFUNCTION()
 	void ToggleUpdateZOffset();
 private:
+	float XAxisLock = -510.0f;
 	float ZLerpAlpha = 0.0f;
 	float CurrentLowestZ = 0.0f;
 

@@ -23,6 +23,8 @@ void ADSCamera::Initialize(ADescensionCharacter* PlayerOne, ADescensionCharacter
 	this->PlayerOne = PlayerOne;
 	this->PlayerTwo = PlayerTwo;
 
+	XAxisLock = PlayerOne->GetActorLocation().X;
+
 	APlayerController* POC = Cast<APlayerController>(PlayerOne->GetController());
 	POC->SetViewTargetWithBlend(this);
 	if(PlayerTwo != nullptr){
