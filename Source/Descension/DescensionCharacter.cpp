@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "DrawDebugHelpers.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ADescensionCharacter
@@ -56,18 +57,26 @@ void ADescensionCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAxis("TurnRate", this, &ADescensionCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ADescensionCharacter::LookUpAtRate);
+
+	PlayerInputComponent->BindAxis("LookUpRate", this, &ADescensionCharacter::ManualSetYLook);
+	PlayerInputComponent->BindAxis("TurnRate", this, &ADescensionCharacter::ManualSetXLook);
+}
+
+void ADescensionCharacter::ManualSetLookDirection(const FVector& LookDir)
+{
+	LookDirection = LookDir;
 }
 
 void ADescensionCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+	//AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
 void ADescensionCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+	//AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
 void ADescensionCharacter::MoveForward(float Value)
@@ -97,4 +106,54 @@ void ADescensionCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ADescensionCharacter::ManualSetXLook(float Value)
+{
+	FVector ControlRot = GetActorForwardVector();
+	if (FMath::Abs(Value) > KINDA_SMALL_NUMBER)
+	{
+		LookPoint = GetActorLocation() + FVector::RightVector * Value * 50.f;
+		FVector Direction = LookPoint - GetActorLocation();
+		LookDirection.Y = Direction.Y;
+		bUseControllerRotationYaw = true;
+		GetCharacterMovement()->bOrientRotationToMovement = false;
+
+		ControlRot = FMath::Lerp(GetActorForwardVector(), LookDirection, FApp::GetDeltaTime());
+		Controller->SetControlRotation(ControlRot.Rotation());
+		RootComponent->bAbsoluteRotation = true;
+	} else
+	{
+		LookPoint = GetActorLocation() + GetActorForwardVector() * 50.f;
+		LookDirection.Y = GetActorRotation().Vector().Y;
+		bUseControllerRotationYaw = false;
+		GetCharacterMovement()->bOrientRotationToMovement = true;
+		RootComponent->bAbsoluteRotation = false;
+	}
+
+	DrawDebugSphere(GetWorld(), LookPoint, 50.0f, 32, FColor::Red);
+	DrawDebugLine(GetWorld(), GetActorLocation(), GetActorLocation() + ControlRot * 50.f, FColor::Green);
+}
+
+void ADescensionCharacter::ManualSetYLook(float Value)
+{
+	if (FMath::Abs(Value) > KINDA_SMALL_NUMBER)
+	{
+		LookDirection.Z = -Value;
+	} else
+	{
+		LookDirection.Z = GetActorRotation().Vector().Z;
+	}
+}
+
+void ADescensionCharacter::Jump()
+{
+	Super::Jump();
+	OnJumpedDelegate.Broadcast();
+}
+
+void ADescensionCharacter::StopJumping()
+{
+	Super::StopJumping();
+	OnStoppedJumpDelegate.Broadcast();
 }

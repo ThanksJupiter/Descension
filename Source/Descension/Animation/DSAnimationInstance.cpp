@@ -72,8 +72,9 @@ void UDSAnimationInstance::SetAimRotation(float DeltaSeconds, const FRotator& Ro
 		}
 	} else
 	{
-		CharacterAimRotator = OwnerCharacter->GetActorForwardVector().Rotation();
 	}*/
+
+	CharacterAimRotator = OwnerPlayer->LookDirection.Rotation();
 
 	float CharacterAimYaw = CharacterAimRotator.Yaw;
 	float CharacterAimPitch = CharacterAimRotator.Pitch;

@@ -31,13 +31,31 @@ public:
 	UPROPERTY()
 	FDSOnJumpedDelegate OnStoppedJumpDelegate;
 
+	UPROPERTY(BlueprintReadOnly)
+	FVector LookDirection;
+
+	UPROPERTY(BlueprintReadOnly)
+	FVector LookPoint;
 protected:
+
+	/** Jumping. */
+	void Jump() override;
+	void StopJumping() override;
 
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
 
 	/** Called for side to side input */
 	void MoveRight(float Value);
+
+	UFUNCTION()
+	void ManualSetXLook(float Value);
+
+	UFUNCTION()
+	void ManualSetYLook(float Value);
+
+	UFUNCTION()
+	void ManualSetLookDirection(const FVector& LookDir);
 
 	/** 
 	 * Called via input to turn at a given rate. 
