@@ -12,10 +12,16 @@ public:
 	UDSFlashLightComponent(const FObjectInitializer& ObjectInitializer);
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation)
-	float BatteryCapcaity = 120.0f;
+	float BatteryCapcaity = 5.0f;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation)
 	float RemainingTime = 0.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation)
+	float OffIntensity = 0.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation)
+	float OnIntensity = 5000.0f;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation)
 	bool bIsFlashLightActive = false;
@@ -24,7 +30,7 @@ public:
 	void DecreaseRemainingTime(float deltaTime);
 
 	UFUNCTION(BlueprintCallable)
-	void ToggleFlashLight();
+	bool ToggleFlashLight(bool setActive = false);
 
 	UFUNCTION(BlueprintCallable)
 	void RechargeBattery();
