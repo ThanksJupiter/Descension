@@ -28,9 +28,9 @@
 /wd4838
 /we4668
 /I .
-/I D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Inc\Descension
-/I D:\Projects\UnrealJam\Descension\Source
-/I D:\Projects\UnrealJam\Descension\Source\Descension
+/I D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\UE4Editor\Inc\Descension
+/I D:\Programs\Github\Descension\Descension\Source
+/I D:\Programs\Github\Descension\Descension\Source\Descension
 /I Runtime
 /I Runtime\Core\Public
 /I Runtime\Core
@@ -432,17 +432,17 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I Runtime\AugmentedReality
-/I D:\VisualStudio\VC\Tools\MSVC\14.16.27023\INCLUDE
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Inc\Descension\DescensionCharacter.gen.cpp"
-/FI"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\Definitions.Descension.h"
-/Fo"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\DescensionCharacter.gen.cpp.obj"
+/FI"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\UE4Editor\Inc\Descension\DescensionCharacter.gen.cpp"
+/FI"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\Definitions.Descension.h"
+/Fo"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\DescensionCharacter.gen.cpp.obj"
 /TP
 /GR-
 /W4

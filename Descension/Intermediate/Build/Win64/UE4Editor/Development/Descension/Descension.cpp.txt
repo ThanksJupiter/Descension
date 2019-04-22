@@ -1,2 +1,2 @@
-D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\Definitions.Descension.h
-d:\projects\unrealjam\descension\source\descension\Descension.h
+D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\Definitions.Descension.h
+d:\programs\github\descension\descension\source\descension\Descension.h

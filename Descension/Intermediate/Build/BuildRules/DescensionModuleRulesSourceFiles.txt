@@ -1,3 +1,3 @@
-D:\Projects\UnrealJam\Descension\Source\Descension\Descension.Build.cs
-D:\Projects\UnrealJam\Descension\Source\Descension.Target.cs
-D:\Projects\UnrealJam\Descension\Source\DescensionEditor.Target.cs
+D:\Programs\Github\Descension\Descension\Source\Descension\Descension.Build.cs
+D:\Programs\Github\Descension\Descension\Source\Descension.Target.cs
+D:\Programs\Github\Descension\Descension\Source\DescensionEditor.Target.cs

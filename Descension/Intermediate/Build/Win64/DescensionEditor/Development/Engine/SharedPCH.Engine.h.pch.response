@@ -188,16 +188,16 @@
 /I Runtime\AudioMixer\Classes
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
-/I D:\VisualStudio\VC\Tools\MSVC\14.16.27023\INCLUDE
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/I D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine
-/Yc"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.cpp"
-/Fo"D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h.obj"
+/I D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine
+/Yc"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.cpp"
+/Fo"D:\Programs\Github\Descension\Descension\Intermediate\Build\Win64\DescensionEditor\Development\Engine\SharedPCH.Engine.h.obj"
 /TP
 /GR-
 /W4
