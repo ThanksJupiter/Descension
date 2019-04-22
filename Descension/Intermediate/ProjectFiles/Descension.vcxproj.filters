@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Descension.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{165C332B-D28D-40FA-9E4F-9848DFCF2D45}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Descension.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DescensionEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{E2A2C92E-4557-4052-9EB7-2C38C0C9AA94}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Descension">
+      <UniqueIdentifier>{BF4A50DE-6EEB-45B3-B909-FBA68F3C09EC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Descension\Descension.Build.cs">
+      <Filter>Source\Descension</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Descension\Descension.cpp">
+      <Filter>Source\Descension</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Descension\Descension.h">
+      <Filter>Source\Descension</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Descension\DescensionCharacter.cpp">
+      <Filter>Source\Descension</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Descension\DescensionCharacter.h">
+      <Filter>Source\Descension</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Descension\DescensionGameMode.cpp">
+      <Filter>Source\Descension</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Descension\DescensionGameMode.h">
+      <Filter>Source\Descension</Filter>
+    </ClInclude>
+    <Filter Include="Source\Descension\Camera">
+      <UniqueIdentifier>{49E2F93B-0B34-49E5-BD2B-9E92A722DEC5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Descension\Camera\DSCamera.cpp">
+      <Filter>Source\Descension\Camera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Descension\Camera\DSCamera.h">
+      <Filter>Source\Descension\Camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

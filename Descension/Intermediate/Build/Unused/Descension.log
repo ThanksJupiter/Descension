@@ -1,0 +1,5 @@
+﻿  Parsing headers for DescensionEditor
+    Running UnrealHeaderTool "D:\Projects\UnrealJam\Descension\Descension.uproject" "D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\DescensionEditor\Development\DescensionEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for DescensionEditor in 5,7173109 seconds
+  Target is up to date
+  Total execution time: 6,27 seconds

@@ -1,0 +1,3 @@
+D:\Projects\UnrealJam\Descension\Intermediate\Build\Win64\UE4Editor\Development\Descension\Definitions.Descension.h
+D:\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
