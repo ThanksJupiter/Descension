@@ -2,7 +2,6 @@
 
 UDSFlashLightComponent::UDSFlashLightComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	bIsFlashLightActive = false;
 	RechargeBattery();
 }
 
@@ -13,18 +12,15 @@ void UDSFlashLightComponent::DecreaseRemainingTime(float DeltaTime)
 		RemainingTime -= DeltaTime;
 		
 		if (RemainingTime <= 0.01f) {		
-			ToggleFlashLight();
+			bIsFlashLightActive = false;
 		}
 	}
 }
 
-bool UDSFlashLightComponent::ToggleFlashLight(bool setActive = false)
+bool UDSFlashLightComponent::ToggleFlashLight()
 { 
-	if (RemainingTime <= 0.01f)
-		return setActive;
-	
-	setActive = !bIsFlashLightActive;
-	return setActive;
+	bIsFlashLightActive = !bIsFlashLightActive;
+	return bIsFlashLightActive;
 }
 
 void UDSFlashLightComponent::RechargeBattery()

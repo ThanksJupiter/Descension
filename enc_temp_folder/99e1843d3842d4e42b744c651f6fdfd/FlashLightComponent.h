@@ -30,7 +30,7 @@ public:
 	void DecreaseRemainingTime(float deltaTime);
 
 	UFUNCTION(BlueprintCallable)
-	bool ToggleFlashLight(bool setActive = false);
+	bool ToggleFlashLight();
 
 	UFUNCTION(BlueprintCallable)
 	void RechargeBattery();
