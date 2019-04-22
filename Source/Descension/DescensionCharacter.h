@@ -6,6 +6,9 @@
 #include "GameFramework/Character.h"
 #include "DescensionCharacter.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDSOnJumpedDelegate);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDSOnStoppedJumpDelegate);
+
 UCLASS(config=Game)
 class ADescensionCharacter : public ACharacter
 {
@@ -21,6 +24,12 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
+
+	UPROPERTY()
+	FDSOnJumpedDelegate OnJumpedDelegate;
+
+	UPROPERTY()
+	FDSOnJumpedDelegate OnStoppedJumpDelegate;
 
 protected:
 
