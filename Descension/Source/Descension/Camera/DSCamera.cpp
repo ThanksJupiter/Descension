@@ -14,13 +14,15 @@ ADSCamera::ADSCamera(const FObjectInitializer& ObjectInitializer): Super(ObjectI
 	SpringArm->SocketOffset = FVector(0.f, 0.f, 150.f);
 	SpringArm->RelativeRotation = FRotator(0.f, 180.f, 0.f);
 
-	//Create a camera and attach to boom
 	Camera = ObjectInitializer.CreateDefaultSubobject<UCameraComponent>(this, TEXT("CoopCamera"));
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = false;
 }
 
 void ADSCamera::Initialize(ADescensionCharacter* PlayerOne, ADescensionCharacter* PlayerTwo /*= nullptr*/){
+	this->PlayerOne = PlayerOne;
+	this->PlayerTwo = PlayerTwo;
+
 	APlayerController* POC = Cast<APlayerController>(PlayerOne->GetController());
 	POC->SetViewTargetWithBlend(this);
 	if(PlayerTwo != nullptr){
@@ -29,7 +31,13 @@ void ADSCamera::Initialize(ADescensionCharacter* PlayerOne, ADescensionCharacter
 	}
 }
 
-void ADSCamera::Update(float DeltaSeconds, const FVector& FirstPos, const FVector& SecondPos){
+void ADSCamera::Update(float DeltaSeconds)
+{	
+	FirstPos = PlayerOne->GetActorLocation();
+	SecondPos = PlayerOne->GetActorLocation();
+	FirstPos.X = XAxisLock;
+	SecondPos.X = XAxisLock;
+
 	FBox Box = FBox(FirstPos, SecondPos);
 	CurrentLowestZ = FirstPos.Z > SecondPos.Z ? SecondPos.Z : FirstPos.Z;
 
