@@ -23,7 +23,7 @@ void ADSCamera::Initialize(ADescensionCharacter* PlayerOne, ADescensionCharacter
 	this->PlayerOne = PlayerOne;
 	this->PlayerTwo = PlayerTwo;
 
-	XAxisLock = PlayerOne->GetActorLocation().X;
+	XAxisOffset = PlayerOne->GetActorLocation().X - CameraDepthOffset;
 
 	APlayerController* POC = Cast<APlayerController>(PlayerOne->GetController());
 	POC->SetViewTargetWithBlend(this);
@@ -37,8 +37,8 @@ void ADSCamera::Update(float DeltaSeconds)
 {	
 	FirstPos = PlayerOne->GetActorLocation();
 	SecondPos = PlayerOne->GetActorLocation();
-	FirstPos.X = XAxisLock;
-	SecondPos.X = XAxisLock;
+	FirstPos.X = XAxisOffset;
+	SecondPos.X = XAxisOffset;
 
 	FBox Box = FBox(FirstPos, SecondPos);
 	CurrentLowestZ = FirstPos.Z > SecondPos.Z ? SecondPos.Z : FirstPos.Z;
